@@ -1,0 +1,9 @@
+c:\users\pc\documents\visual studio 2017\Projects\coffeeshop-sim\coffeeshop-sim\bin\Debug\coffeeshop-sim.exe.config
+c:\users\pc\documents\visual studio 2017\Projects\coffeeshop-sim\coffeeshop-sim\bin\Debug\coffeeshop-sim.exe
+c:\users\pc\documents\visual studio 2017\Projects\coffeeshop-sim\coffeeshop-sim\bin\Debug\coffeeshop-sim.pdb
+c:\users\pc\documents\visual studio 2017\Projects\coffeeshop-sim\coffeeshop-sim\obj\Debug\coffeeshop-sim.csprojResolveAssemblyReference.cache
+c:\users\pc\documents\visual studio 2017\Projects\coffeeshop-sim\coffeeshop-sim\obj\Debug\coffeeshop_sim.Form1.resources
+c:\users\pc\documents\visual studio 2017\Projects\coffeeshop-sim\coffeeshop-sim\obj\Debug\coffeeshop_sim.Properties.Resources.resources
+c:\users\pc\documents\visual studio 2017\Projects\coffeeshop-sim\coffeeshop-sim\obj\Debug\coffeeshop-sim.csproj.GenerateResource.Cache
+c:\users\pc\documents\visual studio 2017\Projects\coffeeshop-sim\coffeeshop-sim\obj\Debug\coffeeshop-sim.exe
+c:\users\pc\documents\visual studio 2017\Projects\coffeeshop-sim\coffeeshop-sim\obj\Debug\coffeeshop-sim.pdb
