@@ -143,7 +143,7 @@ namespace coffeeshop_sim
                 custInterval = randomCust();
             }
             customerNumBox.Text = customerCount.ToString();
-           // pendOrd.Text = custInterval.ToString();
+            nextCust.Text = custInterval.ToString();
         }
 
         private int waitSec = 0; // wait time variable

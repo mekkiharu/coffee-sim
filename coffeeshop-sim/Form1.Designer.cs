@@ -77,6 +77,8 @@
             this.csYear = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
+            this.nextCust = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // startButton
@@ -92,16 +94,16 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(44, 19);
+            this.label1.Location = new System.Drawing.Point(25, 19);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 13);
+            this.label1.Size = new System.Drawing.Size(98, 13);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Waiting Time";
+            this.label1.Text = "Customer Wait time";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(326, 19);
+            this.label3.Location = new System.Drawing.Point(348, 19);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(80, 13);
             this.label3.TabIndex = 5;
@@ -233,7 +235,7 @@
             // pendOrd
             // 
             this.pendOrd.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pendOrd.Location = new System.Drawing.Point(346, 45);
+            this.pendOrd.Location = new System.Drawing.Point(370, 41);
             this.pendOrd.Name = "pendOrd";
             this.pendOrd.ReadOnly = true;
             this.pendOrd.Size = new System.Drawing.Size(51, 38);
@@ -303,7 +305,7 @@
             // customerNumBox
             // 
             this.customerNumBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customerNumBox.Location = new System.Drawing.Point(253, 45);
+            this.customerNumBox.Location = new System.Drawing.Point(275, 41);
             this.customerNumBox.Name = "customerNumBox";
             this.customerNumBox.ReadOnly = true;
             this.customerNumBox.Size = new System.Drawing.Size(51, 38);
@@ -313,7 +315,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(233, 19);
+            this.label9.Location = new System.Drawing.Point(263, 19);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(82, 13);
             this.label9.TabIndex = 32;
@@ -396,7 +398,7 @@
             this.csMonth.Location = new System.Drawing.Point(704, 41);
             this.csMonth.Name = "csMonth";
             this.csMonth.ReadOnly = true;
-            this.csMonth.Size = new System.Drawing.Size(51, 38);
+            this.csMonth.Size = new System.Drawing.Size(92, 38);
             this.csMonth.TabIndex = 40;
             this.csMonth.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -426,7 +428,7 @@
             this.trMonth.Location = new System.Drawing.Point(704, 104);
             this.trMonth.Name = "trMonth";
             this.trMonth.ReadOnly = true;
-            this.trMonth.Size = new System.Drawing.Size(51, 38);
+            this.trMonth.Size = new System.Drawing.Size(92, 38);
             this.trMonth.TabIndex = 43;
             this.trMonth.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -481,27 +483,27 @@
             // trYear
             // 
             this.trYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.trYear.Location = new System.Drawing.Point(771, 104);
+            this.trYear.Location = new System.Drawing.Point(815, 104);
             this.trYear.Name = "trYear";
             this.trYear.ReadOnly = true;
-            this.trYear.Size = new System.Drawing.Size(51, 38);
+            this.trYear.Size = new System.Drawing.Size(108, 38);
             this.trYear.TabIndex = 50;
             this.trYear.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // csYear
             // 
             this.csYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.csYear.Location = new System.Drawing.Point(771, 41);
+            this.csYear.Location = new System.Drawing.Point(815, 41);
             this.csYear.Name = "csYear";
             this.csYear.ReadOnly = true;
-            this.csYear.Size = new System.Drawing.Size(51, 38);
+            this.csYear.Size = new System.Drawing.Size(108, 38);
             this.csYear.TabIndex = 51;
             this.csYear.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(712, 9);
+            this.label19.Location = new System.Drawing.Point(731, 9);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(44, 13);
             this.label19.TabIndex = 52;
@@ -510,17 +512,38 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(779, 9);
+            this.label20.Location = new System.Drawing.Point(841, 9);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(36, 13);
             this.label20.TabIndex = 53;
             this.label20.Text = "Yearly";
             // 
+            // nextCust
+            // 
+            this.nextCust.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nextCust.Location = new System.Drawing.Point(190, 41);
+            this.nextCust.Name = "nextCust";
+            this.nextCust.ReadOnly = true;
+            this.nextCust.Size = new System.Drawing.Size(51, 38);
+            this.nextCust.TabIndex = 54;
+            this.nextCust.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(163, 19);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(90, 13);
+            this.label17.TabIndex = 55;
+            this.label17.Text = "Next Customer in:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(834, 363);
+            this.ClientSize = new System.Drawing.Size(935, 363);
+            this.Controls.Add(this.label17);
+            this.Controls.Add(this.nextCust);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.csYear);
@@ -621,6 +644,8 @@
         private System.Windows.Forms.TextBox csYear;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.TextBox nextCust;
+        private System.Windows.Forms.Label label17;
     }
 }
 
