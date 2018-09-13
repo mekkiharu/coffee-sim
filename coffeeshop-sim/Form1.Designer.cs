@@ -357,9 +357,9 @@
             this.label14.AutoSize = true;
             this.label14.Location = new System.Drawing.Point(446, 191);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(139, 13);
+            this.label14.Size = new System.Drawing.Size(212, 13);
             this.label14.TabIndex = 36;
-            this.label14.Text = "Average Time spent serving";
+            this.label14.Text = "Average Time spent serving each customer";
             // 
             // label15
             // 
@@ -582,9 +582,6 @@
         private System.Windows.Forms.TextBox openTimeSec;
         private System.Windows.Forms.Timer operationTimer;
         private System.Windows.Forms.Timer waitingTimer;
-        private System.Windows.Forms.Timer pendingTimer;
-        private System.Windows.Forms.Timer orderTImer;
-        private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Timer orderTimer;
         private System.Windows.Forms.Timer prepTimer;
         private System.Windows.Forms.TextBox openTimeMin;
