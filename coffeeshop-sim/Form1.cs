@@ -19,11 +19,12 @@ namespace coffeeshop_sim
         //Coffee shop operations simulator
         // 1 minute = 1 second
         // 1 hour = 1 minute
-        
-        private int customerCount = 4;
+        // price = 35
+        private int customerCount = 5;
         private int productCost = 30, productPrice = 35;
         private int revenue = 0;
         private int servedCustomer = 0, pendingOrders = 0;
+        private bool orderisActive = false;
         private void startButton_Click(object sender, EventArgs e)
         {
             operationTimer = new Timer();
@@ -57,16 +58,26 @@ namespace coffeeshop_sim
             
         }
 
-        private static int randomMin()
+        private static int randomCust()
         {
             Random rand = new Random();
-            return rand.Next(1, 5);
+            return rand.Next(1, 10);
         }
 
         private static int randomSec()
         {
             Random rand = new Random();
-            return rand.Next(1, 5);
+            return rand.Next(2, 5);
+        }
+        private static int randomWait()
+        {
+            Random rand = new Random();
+            return rand.Next(3, 10);
+        }
+        private static int randomPrep()
+        {
+            Random rand = new Random();
+            return rand.Next(2, 4);
         }
         private int openSecond = 0, openMin = 0, openHour = 0; // operationTimer variables
         private void operationTimer_Tick(object sender, EventArgs e)
@@ -86,44 +97,79 @@ namespace coffeeshop_sim
             openTimeMin.Text = openMin.ToString();
             openTimeHour.Text = openHour.ToString();
         }
-        private void customerHandler()
-        {
-            Random rand = new Random();
-            customerCount = rand.Next(1, 5);
-        }
-        private int orderSec = randomSec(), orderMin = randomMin();
+
+        private int orderSec = randomSec(); // order timer variables
 
         private void orderTimer_Tick(object sender, EventArgs e)
         {
-            if (customerCount != 0)
+            if (orderisActive)
             {
-                orderSec -= 1;
-                if (orderSec < 0)
+                orderSec--;
+                if (orderSec == 0)
                 {
-                    
-                    customerCount -= 1;
-                    if (customerCount == 0)
-                        orderSec = 0;
-                    else
-                        orderSec = randomSec();
+                    customerCount--;
+                    pendingOrders++;
+                    pendOrd.Text = pendingOrders.ToString();
+                    orderisActive = false;
                 }
+                if (orderSec < 0)
+                    orderSec = randomSec();
             }
             orderTimeSec.Text = orderSec.ToString();
         }
-
+        private int custInterval = randomCust();
         private void pendTimer_Tick(object sender, EventArgs e) //customer timer
         {
-
+            custInterval -= 1;
+            if (custInterval < 0)
+            {
+                customerCount += 1;
+                
+                custInterval = randomCust();
+            }
+            customerNumBox.Text = customerCount.ToString();
+           // pendOrd.Text = custInterval.ToString();
         }
 
+        private int waitSec = randomWait(); // wait time variable
         private void waitingTimer_Tick(object sender, EventArgs e)
         {
-
+            if (!orderisActive && customerCount > 0)
+            {
+                //waitTimeSec.Text = "0";
+                orderisActive = true;
+                orderSec = randomSec();
+                waitSec = randomWait();
+                if (customerCount == 1)
+                {
+                    waitSec = 0;
+                }
+            }
+            else if (orderisActive && customerCount > 1)
+            {
+                waitSec--;
+                if (waitSec == 0 && orderisActive)
+                    customerCount--;
+                if (waitSec < 0)
+                    waitSec = randomWait();
+            }
+            waitTimeSec.Text = waitSec.ToString();
         }
 
+        private int prepSec = randomPrep();
         private void prepTimer_Tick(object sender, EventArgs e)
         {
-
+            prepSec--;
+            if (prepSec == 0)
+            {
+                pendingOrders--;
+                pendOrd.Text = pendingOrders.ToString();
+            }
+            if (prepSec < 0 && pendingOrders > 0)
+                prepSec = randomPrep();
+            if (pendingOrders == 0)
+                prepSec = 0;
+            prepTimeSec.Text = prepSec.ToString();
         }
 
         private void stopButton_Click(object sender, EventArgs e)

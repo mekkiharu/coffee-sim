@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.startButton = new System.Windows.Forms.Button();
-            this.exportButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -59,6 +58,25 @@
             this.label9 = new System.Windows.Forms.Label();
             this.customerTimer = new System.Windows.Forms.Timer(this.components);
             this.stopButton = new System.Windows.Forms.Button();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.csDay = new System.Windows.Forms.TextBox();
+            this.csWeek = new System.Windows.Forms.TextBox();
+            this.csMonth = new System.Windows.Forms.TextBox();
+            this.trDay = new System.Windows.Forms.TextBox();
+            this.trWeek = new System.Windows.Forms.TextBox();
+            this.trMonth = new System.Windows.Forms.TextBox();
+            this.avgMin = new System.Windows.Forms.TextBox();
+            this.avgSec = new System.Windows.Forms.TextBox();
+            this.avgRev = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.trYear = new System.Windows.Forms.TextBox();
+            this.csYear = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // startButton
@@ -70,15 +88,6 @@
             this.startButton.Text = "Start Simulation";
             this.startButton.UseVisualStyleBackColor = true;
             this.startButton.Click += new System.EventHandler(this.startButton_Click);
-            // 
-            // exportButton
-            // 
-            this.exportButton.Location = new System.Drawing.Point(346, 316);
-            this.exportButton.Name = "exportButton";
-            this.exportButton.Size = new System.Drawing.Size(75, 23);
-            this.exportButton.TabIndex = 2;
-            this.exportButton.Text = "Export";
-            this.exportButton.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -317,7 +326,7 @@
             // stopButton
             // 
             this.stopButton.Enabled = false;
-            this.stopButton.Location = new System.Drawing.Point(140, 316);
+            this.stopButton.Location = new System.Drawing.Point(305, 316);
             this.stopButton.Name = "stopButton";
             this.stopButton.Size = new System.Drawing.Size(101, 23);
             this.stopButton.TabIndex = 1;
@@ -325,11 +334,212 @@
             this.stopButton.UseVisualStyleBackColor = true;
             this.stopButton.Click += new System.EventHandler(this.stopButton_Click);
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(446, 48);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(93, 13);
+            this.label12.TabIndex = 34;
+            this.label12.Text = "Customers Served";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(446, 104);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(78, 13);
+            this.label13.TabIndex = 35;
+            this.label13.Text = "Total Revenue";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(446, 191);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(139, 13);
+            this.label14.TabIndex = 36;
+            this.label14.Text = "Average Time spent serving";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(446, 263);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(196, 13);
+            this.label15.TabIndex = 37;
+            this.label15.Text = "Average Revenue per Customer Served";
+            // 
+            // csDay
+            // 
+            this.csDay.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.csDay.Location = new System.Drawing.Point(546, 41);
+            this.csDay.Name = "csDay";
+            this.csDay.ReadOnly = true;
+            this.csDay.Size = new System.Drawing.Size(51, 38);
+            this.csDay.TabIndex = 38;
+            this.csDay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // csWeek
+            // 
+            this.csWeek.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.csWeek.Location = new System.Drawing.Point(624, 41);
+            this.csWeek.Name = "csWeek";
+            this.csWeek.ReadOnly = true;
+            this.csWeek.Size = new System.Drawing.Size(51, 38);
+            this.csWeek.TabIndex = 39;
+            this.csWeek.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // csMonth
+            // 
+            this.csMonth.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.csMonth.Location = new System.Drawing.Point(704, 41);
+            this.csMonth.Name = "csMonth";
+            this.csMonth.ReadOnly = true;
+            this.csMonth.Size = new System.Drawing.Size(51, 38);
+            this.csMonth.TabIndex = 40;
+            this.csMonth.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // trDay
+            // 
+            this.trDay.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.trDay.Location = new System.Drawing.Point(546, 104);
+            this.trDay.Name = "trDay";
+            this.trDay.ReadOnly = true;
+            this.trDay.Size = new System.Drawing.Size(51, 38);
+            this.trDay.TabIndex = 41;
+            this.trDay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // trWeek
+            // 
+            this.trWeek.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.trWeek.Location = new System.Drawing.Point(624, 104);
+            this.trWeek.Name = "trWeek";
+            this.trWeek.ReadOnly = true;
+            this.trWeek.Size = new System.Drawing.Size(51, 38);
+            this.trWeek.TabIndex = 42;
+            this.trWeek.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // trMonth
+            // 
+            this.trMonth.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.trMonth.Location = new System.Drawing.Point(704, 104);
+            this.trMonth.Name = "trMonth";
+            this.trMonth.ReadOnly = true;
+            this.trMonth.Size = new System.Drawing.Size(51, 38);
+            this.trMonth.TabIndex = 43;
+            this.trMonth.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // avgMin
+            // 
+            this.avgMin.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.avgMin.Location = new System.Drawing.Point(488, 222);
+            this.avgMin.Name = "avgMin";
+            this.avgMin.ReadOnly = true;
+            this.avgMin.Size = new System.Drawing.Size(51, 38);
+            this.avgMin.TabIndex = 44;
+            this.avgMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // avgSec
+            // 
+            this.avgSec.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.avgSec.Location = new System.Drawing.Point(558, 222);
+            this.avgSec.Name = "avgSec";
+            this.avgSec.ReadOnly = true;
+            this.avgSec.Size = new System.Drawing.Size(51, 38);
+            this.avgSec.TabIndex = 45;
+            this.avgSec.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // avgRev
+            // 
+            this.avgRev.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.avgRev.Location = new System.Drawing.Point(524, 289);
+            this.avgRev.Name = "avgRev";
+            this.avgRev.ReadOnly = true;
+            this.avgRev.Size = new System.Drawing.Size(51, 38);
+            this.avgRev.TabIndex = 46;
+            this.avgRev.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(555, 9);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(30, 13);
+            this.label16.TabIndex = 47;
+            this.label16.Text = "Daily";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(621, 9);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(43, 13);
+            this.label18.TabIndex = 49;
+            this.label18.Text = "Weekly";
+            // 
+            // trYear
+            // 
+            this.trYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.trYear.Location = new System.Drawing.Point(771, 104);
+            this.trYear.Name = "trYear";
+            this.trYear.ReadOnly = true;
+            this.trYear.Size = new System.Drawing.Size(51, 38);
+            this.trYear.TabIndex = 50;
+            this.trYear.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // csYear
+            // 
+            this.csYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.csYear.Location = new System.Drawing.Point(771, 41);
+            this.csYear.Name = "csYear";
+            this.csYear.ReadOnly = true;
+            this.csYear.Size = new System.Drawing.Size(51, 38);
+            this.csYear.TabIndex = 51;
+            this.csYear.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(712, 9);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(44, 13);
+            this.label19.TabIndex = 52;
+            this.label19.Text = "Monthly";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(779, 9);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(36, 13);
+            this.label20.TabIndex = 53;
+            this.label20.Text = "Yearly";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(433, 363);
+            this.ClientSize = new System.Drawing.Size(834, 363);
+            this.Controls.Add(this.label20);
+            this.Controls.Add(this.label19);
+            this.Controls.Add(this.csYear);
+            this.Controls.Add(this.trYear);
+            this.Controls.Add(this.label18);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.avgRev);
+            this.Controls.Add(this.avgSec);
+            this.Controls.Add(this.avgMin);
+            this.Controls.Add(this.trMonth);
+            this.Controls.Add(this.trWeek);
+            this.Controls.Add(this.trDay);
+            this.Controls.Add(this.csMonth);
+            this.Controls.Add(this.csWeek);
+            this.Controls.Add(this.csDay);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.label12);
             this.Controls.Add(this.customerNumBox);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label11);
@@ -352,7 +562,6 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.exportButton);
             this.Controls.Add(this.stopButton);
             this.Controls.Add(this.startButton);
             this.Name = "Form1";
@@ -365,7 +574,6 @@
         #endregion
 
         private System.Windows.Forms.Button startButton;
-        private System.Windows.Forms.Button exportButton;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
@@ -397,6 +605,25 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Timer customerTimer;
         private System.Windows.Forms.Button stopButton;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox csDay;
+        private System.Windows.Forms.TextBox csWeek;
+        private System.Windows.Forms.TextBox csMonth;
+        private System.Windows.Forms.TextBox trDay;
+        private System.Windows.Forms.TextBox trWeek;
+        private System.Windows.Forms.TextBox trMonth;
+        private System.Windows.Forms.TextBox avgMin;
+        private System.Windows.Forms.TextBox avgSec;
+        private System.Windows.Forms.TextBox avgRev;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.TextBox trYear;
+        private System.Windows.Forms.TextBox csYear;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label20;
     }
 }
 
